@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import './App.css';
 
 class Header extends Component {
   render() {
     return (
-      <h1> my header</h1>
+      <h1>Habit Tracker</h1>
     )
   }
 }
