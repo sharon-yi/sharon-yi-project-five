@@ -65,7 +65,7 @@ class AddHabit extends Component {
           {this.state.habitTracker.map((habitValue, i) => {
             return (
               <div className="habitAndDelete">
-                <span id={habitValue.habitId} className="deleteHabit" onClick={this.deleteHabit}><i class="fas fa-trash-alt"></i></span>
+                <span id={habitValue.habitId} className="deleteHabit" onClick={this.deleteHabit}><i className="fas fa-trash-alt"></i></span>
                 <div className="habitItem">
                   <li key={i}>
                     {habitValue.habitName}

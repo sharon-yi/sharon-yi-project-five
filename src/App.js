@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import firebase from './firebase';
+// import firebase from './firebase';
 import './App.css';
 import Header from './Header';
 import AddHabit from './AddHabit';
@@ -17,7 +17,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    const dbRef = firebase.database().ref();
+    // const dbRef = firebase.database().ref();
 
   };
 
