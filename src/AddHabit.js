@@ -64,14 +64,27 @@ class AddHabit extends Component {
         <ul>
           {this.state.habitTracker.map((habitValue, i) => {
             return (
-              <li key={i}>
-                <span id={habitValue.habitId} className="deleteIt" onClick={this.deleteHabit}>x</span>
-                {habitValue.habitName}
-              </li>
+              <div className="habitAndDelete">
+                <span id={habitValue.habitId} className="deleteHabit" onClick={this.deleteHabit}><i class="fas fa-trash-alt"></i></span>
+                <div className="habitItem">
+                  <li key={i}>
+                    {habitValue.habitName}
+                  </li>
+                  <form className="checkDate">
+                    <input type="checkbox" className="individualCheckbox" name="" id=""/>
+                    <input type="checkbox" className="individualCheckbox" name="" id="" />
+                    <input type="checkbox" className="individualCheckbox" name="" id="" />
+                    <input type="checkbox" className="individualCheckbox" name="" id="" />
+                    <input type="checkbox" className="individualCheckbox" name="" id="" />
+                    <input type="checkbox" className="individualCheckbox" name="" id="" />
+                    <input type="checkbox" className="individualCheckbox" name="" id="" />
+                  </form>
+                </div>
+              </div>
             )
           })}
         </ul>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit} className="addHabitInput">
           <label htmlFor="habitName"></label>
           <input id="habitName" type="text" onChange={this.handleChange} value={this.state.userInput} />
           <button type="submit">Add habit</button>
