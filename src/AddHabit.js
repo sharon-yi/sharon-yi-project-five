@@ -3,8 +3,6 @@ import firebase from './firebase';
 import './App.css';
 import GetCheckboxInfo from './GetCheckboxInfo'
 
-
-
 class AddHabit extends Component {
   constructor() {
     super();

@@ -1,0 +1,142 @@
+
+body {
+  background-color: rgb(251, 249, 255);
+  width: 90%;
+  max-width: 780px;
+  margin: 0 auto;
+  font-family: proxima-soft, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style-type: none;
+  font-size: 18px;
+}
+h1 {
+  color: rgb(99, 30, 209);
+}
+.datesContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.dates {
+  display: flex;
+  justify-content: space-evenly;
+  width: 55.7%;
+  padding-right: 2px;
+}
+
+.dateName {
+  text-transform: uppercase;
+  margin: 0 0 10px 0;
+  color: rgb(99, 30, 209);
+}
+
+.habitAndDelete {
+  display: flex;
+  align-items: center;
+}
+
+.deleteHabit {
+  margin-right: 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: lightgray;
+}
+
+.deleteHabit:hover {
+  color: rgb(216, 187, 235);
+}
+
+.deleteHabit:active {
+  color: rgb(99, 30, 209);
+}
+
+.habitItem {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 0px 10px 20px;
+  margin-bottom: 10px;
+  border: 2px solid rgb(221, 211, 238);
+  border-radius: 10px;
+}
+ul li {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.checkDate {
+  display: flex;
+  width: 60%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+/* ADDING HABIT INPUT SECTION AND BUTTON */
+
+.addHabitInput {
+  float: left;
+}
+
+.addHabitInput input {
+  width: 200px;
+  margin-left: 35px;
+  padding: 5px;
+  border: 2px solid rgb(221, 211, 238);
+  border-radius: 5px;
+}
+.addHabitInput button {
+  background-color: white;
+  color: rgb(99, 30, 209);
+  font-weight: bold;
+  border: 2px solid rgb(221, 211, 238);
+  border-radius: 5px;
+  margin-left: 5px;
+  width: 120px;
+  padding: 5px;
+}
+
+.addHabitInput button:hover {
+  background-color: rgb(216, 187, 235);
+  border: 2px solid rgb(183, 161, 221);
+}
+
+.addHabitInput button:active {
+  background-color: rgb(99, 30, 209);
+  color: white;
+  border: 2px solid rgb(77, 21, 168);
+}
+
+/* RESET WEEKS BUTTON */
+.resetWeeks {
+  float: right;
+  background-color: white;
+  color: rgb(99, 30, 209);
+  font-weight: bold;
+  border: 2px solid rgb(221, 211, 238);
+  border-radius: 5px;
+  margin-left: 5px;
+  width: 150px;
+  padding: 5px;
+}
+
+.resetWeeks:hover {
+  background-color: rgb(216, 187, 235);
+  border: 2px solid rgb(183, 161, 221);
+}
+
+.resetWeeks:active {
+  background-color: rgb(99, 30, 209);
+  color: white;
+  border: 2px solid rgb(77, 21, 168);
+}

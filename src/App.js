@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './styles/styles.scss';
 import Header from './Header';
 import AddHabit from './AddHabit';
 

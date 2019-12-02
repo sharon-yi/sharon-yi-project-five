@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import firebase from './firebase';
-import './App.css';
 
-import { Checkbox, Switch } from 'pretty-checkbox-react';
+import { Checkbox } from 'pretty-checkbox-react';
 
 
 class GetCheckboxInfo extends Component {
@@ -22,62 +21,49 @@ class GetCheckboxInfo extends Component {
       dbRef.child(this.props.habitValue.habitId).child(habitDay).set(!snapshot.val())
     })
   }
-
-    //change the value to be the opposite
+  //change the value to be the opposite
 
 
   render() {
     return (
-        <form className="checkDate">
-        <input
-          id="sunday"
-          type="checkbox"
+      <form className="checkDate">
+        <Checkbox shape="round" color="success" icon={<i className="fas fa-check-circle"></i>} animation="tada" id="sunday"
           className="individualCheckbox"
           checked={this.props.habitValue.habitName.sunday}
-          onChange={this.handleCheckOnChange}
-        />
-        <input
-          type="checkbox"
+          onChange={this.handleCheckOnChange}></Checkbox>
+
+        <Checkbox shape="round" color="success-o" icon={<i className="fas fa-check-circle"></i>} animation="tada" 
           id="monday"
           className="individualCheckbox"
           checked={this.props.habitValue.habitName.monday}
-          onChange={this.handleCheckOnChange}
-        />
-        <input
-          type="checkbox"
+          onChange={this.handleCheckOnChange}></Checkbox>
+        <Checkbox shape="round" color="success-o" icon={<i className="fas fa-check-circle"></i>} animation="tada" 
           id="tuesday"
           className="individualCheckbox"
           checked={this.props.habitValue.habitName.tuesday}
-          onChange={this.handleCheckOnChange}
-        />
-        <input
-          type="checkbox"
+          onChange={this.handleCheckOnChange}></Checkbox>
+        <Checkbox shape="round" color="success-o" icon={<i className="fas fa-check-circle"></i>} animation="tada" 
           id="wednesday"
           className="individualCheckbox"
           checked={this.props.habitValue.habitName.wednesday}
-          onChange={this.handleCheckOnChange}
-        />
-        <input
-          type="checkbox"
+          onChange={this.handleCheckOnChange}></Checkbox>
+        <Checkbox shape="round" color="success-o" icon={<i className="fas fa-check-circle"></i>} animation="tada" 
           id="thursday"
           className="individualCheckbox"
           checked={this.props.habitValue.habitName.thursday}
-          onChange={this.handleCheckOnChange}
-        />
-        <input
-          type="checkbox"
+          onChange={this.handleCheckOnChange}></Checkbox>
+        <Checkbox shape="round" color="success-o" icon={<i className="fas fa-check-circle"></i>} animation="tada" 
           id="friday"
           className="individualCheckbox"
           checked={this.props.habitValue.habitName.friday}
-          onChange={this.handleCheckOnChange}
-        />
-        <input
-          type="checkbox"
+          onChange={this.handleCheckOnChange}></Checkbox>
+        <Checkbox shape="round" color="success-o" icon={<i className="fas fa-check-circle"></i>} animation="tada" 
           id="saturday"
           className="individualCheckbox"
           checked={this.props.habitValue.habitName.saturday}
-          onChange={this.handleCheckOnChange}
-        />
+          onChange={this.handleCheckOnChange}></Checkbox>
+
+
       </form>
     );
   }
