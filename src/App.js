@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
-// import firebase from './firebase';
 import './App.css';
 import Header from './Header';
 import AddHabit from './AddHabit';
-
-
-
 
 
 class App extends Component {
@@ -15,11 +11,6 @@ class App extends Component {
       habitTracker: [],
     }
   }
-
-  componentDidMount() {
-    // const dbRef = firebase.database().ref();
-
-  };
 
   render() {
     return (

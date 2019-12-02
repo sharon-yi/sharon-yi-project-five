@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import firebase from './firebase';
 import './App.css';
-// import DeleteHabit from './DeleteHabit'
+import GetCheckboxInfo from './GetCheckboxInfo'
+
 
 
 class AddHabit extends Component {
@@ -9,7 +10,7 @@ class AddHabit extends Component {
     super();
     this.state = {
       habitTracker: [],
-      userInput: ''
+      userInput: '',
     }
   }
 
@@ -46,17 +47,28 @@ class AddHabit extends Component {
     const dbRef = firebase.database().ref();
 
     if (habitToAdd !== '') {
-      dbRef.push(habitToAdd)
+      const newHabitThing = {
+        habitName: habitToAdd,
+        sunday: false,
+        monday: false,
+        tuesday: false,
+        wednesday: false,
+        thursday: false,
+        friday: false,
+        saturday: false
+      }
+      dbRef.push(newHabitThing)
       this.setState({
         userInput: ''
       })
     }
   }
 
-  deleteHabit = (e) => {
+  deleteHabit = habitId => {
     const dbRef = firebase.database().ref();
-    dbRef.child(e.target.id).remove()
+    dbRef.child(habitId).remove();
   }
+
 
   render() {
     return (
@@ -64,22 +76,19 @@ class AddHabit extends Component {
         <ul>
           {this.state.habitTracker.map((habitValue, i) => {
             return (
-              <div className="habitAndDelete">
-                <span id={habitValue.habitId} className="deleteHabit" onClick={this.deleteHabit}><i className="fas fa-trash-alt"></i></span>
-                <div className="habitItem">
-                  <li key={i}>
-                    {habitValue.habitName}
+              <div className="habitAndDelete" key={i}>
+                <span
+                  id={habitValue.habitId}
+                  className="deleteHabit"
+                  onClick={() => this.deleteHabit(habitValue.habitId)}>
+                  <i className="fas fa-trash-alt"></i>
+                </span>
+                <ul className="habitItem">
+                  <li>
+                    {habitValue.habitName.habitName}
+                    <GetCheckboxInfo habitValue={habitValue} />
                   </li>
-                  <form className="checkDate">
-                    <input type="checkbox" className="individualCheckbox" name="" id=""/>
-                    <input type="checkbox" className="individualCheckbox" name="" id="" />
-                    <input type="checkbox" className="individualCheckbox" name="" id="" />
-                    <input type="checkbox" className="individualCheckbox" name="" id="" />
-                    <input type="checkbox" className="individualCheckbox" name="" id="" />
-                    <input type="checkbox" className="individualCheckbox" name="" id="" />
-                    <input type="checkbox" className="individualCheckbox" name="" id="" />
-                  </form>
-                </div>
+                </ul>
               </div>
             )
           })}
