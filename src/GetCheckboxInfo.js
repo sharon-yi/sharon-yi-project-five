@@ -3,11 +3,6 @@ import firebase from './firebase';
 import { Checkbox } from 'pretty-checkbox-react';
 
 class GetCheckboxInfo extends Component {
-  constructor() {
-    super();
-    this.state = {
-    };
-  }
 
   handleCheckOnChange = (e) => {
     const habitDay = e.target.id

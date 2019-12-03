@@ -1,20 +1,7 @@
 import React, { Component } from 'react';
 import firebase from './firebase';
-import AddHabit from './AddHabit';
 
 class ClearAllCheckbox extends Component {
-constructor() {
-  super();
-  this.state = {
-    sunday: false,
-    monday: false,
-    tuesday: false,
-    wednesday: false,
-    thursday: false,
-    friday: false,
-    saturday: false
-  }
-}
 
   handleOnClear = (e) => {
     const dbRef = firebase.database().ref();
@@ -27,7 +14,6 @@ constructor() {
       dbRef.child(habit.habitId).child('thursday').set(false);
       dbRef.child(habit.habitId).child('friday').set(false);
       dbRef.child(habit.habitId).child('saturday').set(false);
-
     })
   }
 
