@@ -19,29 +19,16 @@ constructor() {
   handleOnClear = (e) => {
     const dbRef = firebase.database().ref();
 
-    for (let i = 0; i < this.props.habitTracker.length; i++) {
-      // this.props.habitTracker[i].habitName
-      const sunday = this.props.habitTracker[i].habitName.sunday
-      const monday = this.props.habitTracker[i].habitName.monday
-      const tuesday = this.props.habitTracker[i].habitName.tuesday
-      const wednesday = this.props.habitTracker[i].habitName.wednesday
-      const thursday = this.props.habitTracker[i].habitName.thursday
-      const friday = this.props.habitTracker[i].habitName.friday
-      const saturday = this.props.habitTracker[i].habitName.saturday
+    this.props.habitTracker.forEach((habit) => {
+      dbRef.child(habit.habitId).child('sunday').set(false);
+      dbRef.child(habit.habitId).child('monday').set(false);
+      dbRef.child(habit.habitId).child('tuesday').set(false);
+      dbRef.child(habit.habitId).child('wednesday').set(false);
+      dbRef.child(habit.habitId).child('thursday').set(false);
+      dbRef.child(habit.habitId).child('friday').set(false);
+      dbRef.child(habit.habitId).child('saturday').set(false);
 
-      // const clearDays = {
-
-      // }
-
-      dbRef.set(sunday)
-
-    }
-
-    // this.props.habitTracker[i].habitName.sunday = false,
-    //   this.props.habitTracker[i].habitName.monday = false,
-    //   this.props.habitTracker[i].habitName.tuesday = false,
-    //   this.props.habitTracker[i].habitName.wednesday = false
-
+    })
   }
 
   render() {
