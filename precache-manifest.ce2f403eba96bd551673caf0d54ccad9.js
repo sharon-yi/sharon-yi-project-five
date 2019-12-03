@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ea2d1d2be9b60ec562cf52693f3a943f",
+    "revision": "8e841a513b12d8272fdcdb4e87e36fb2",
     "url": "/sharon-yi-project-five/index.html"
   },
   {
-    "revision": "fe3c51901a2ac9df78a9",
+    "revision": "c5bf08bbc4d0ec266cbb",
     "url": "/sharon-yi-project-five/static/css/main.1b181e5c.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/sharon-yi-project-five/static/js/2.744f93ba.chunk.js"
   },
   {
-    "revision": "fe3c51901a2ac9df78a9",
-    "url": "/sharon-yi-project-five/static/js/main.a778d5d4.chunk.js"
+    "revision": "c5bf08bbc4d0ec266cbb",
+    "url": "/sharon-yi-project-five/static/js/main.f590ff5e.chunk.js"
   },
   {
     "revision": "d898f55b42b4d5b01831",
