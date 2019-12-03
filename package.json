@@ -1,5 +1,6 @@
 {
   "name": "sharon-yi-project-five",
+  "homepage": "https://sharon-yi.github.io/sharon-yi-project-five/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -7,6 +8,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "@fortawesome/react-fontawesome": "^0.1.7",
     "firebase": "^7.5.0",
+    "gh-pages": "^2.1.1",
     "node-sass": "^4.13.0",
     "pretty-checkbox": "^3.0.3",
     "pretty-checkbox-react": "^1.1.0",
@@ -18,7 +20,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"

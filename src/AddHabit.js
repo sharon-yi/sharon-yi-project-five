@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import firebase from './firebase';
 import './App.css';
-import GetCheckboxInfo from './GetCheckboxInfo'
+import GetCheckboxInfo from './GetCheckboxInfo';
+import ClearAllCheckbox from './ClearAllCheckbox';
 
 class AddHabit extends Component {
   constructor() {
@@ -95,6 +96,7 @@ class AddHabit extends Component {
           <input id="habitName" type="text" onChange={this.handleChange} value={this.state.userInput} />
           <button type="submit">Add habit</button>
         </form>
+        <ClearAllCheckbox habitTracker={this.state.habitTracker}/>
       </div>
     )
   }

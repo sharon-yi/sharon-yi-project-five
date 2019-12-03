@@ -13,17 +13,14 @@ class GetCheckboxInfo extends Component {
     const habitDay = e.target.id
     //access the database 
     const dbRef = firebase.database().ref();
-    //specifically the node that is identified by the id
-    //we want to get the 'sunday' of the id
+    //access the node that is identified by the id
+    //and get the 'sunday' of the id
     dbRef.child(this.props.habitValue.habitId).child(habitDay).once('value').then((snapshot) => {
       dbRef.child(this.props.habitValue.habitId).child(habitDay).set(!snapshot.val())
     })
   }
   //change the value to be the opposite
 
-
-
-  // CLEARING ALL
   render() {
     return (
       <form className="checkDate">

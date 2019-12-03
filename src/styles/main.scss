@@ -63,26 +63,28 @@ h2 {
   @include tablet {
     justify-content: space-around;
   }
-}
 
-.dates {
-  display: flex;
-  justify-content: space-evenly;
-  width: 55.7%;
-  padding-right: 2px;
+  .dates {
+    display: flex;
+    justify-content: space-evenly;
+    width: 55.7%;
+    padding-right: 2px;
 
-  @include tablet {
-    padding-left: 6%;
-    width: 90%;
-    justify-content: space-around;
+    @include tablet {
+      padding-left: 6%;
+      width: 90%;
+      justify-content: space-around;
+    }
+  }
+
+  .dateName {
+    text-transform: uppercase;
+    margin: 0 0 10px 0;
+    color: rgb(247, 164, 10);
   }
 }
 
-.dateName {
-  text-transform: uppercase;
-  margin: 0 0 10px 0;
-  color: rgb(247, 164, 10);
-}
+
 
 /* ADDING HABIT INPUT SECTION AND BUTTON */
 

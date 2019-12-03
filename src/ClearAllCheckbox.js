@@ -1,29 +1,53 @@
 import React, { Component } from 'react';
-import GetCheckboxInfo from './GetCheckboxInfo';
-
+import firebase from './firebase';
+import AddHabit from './AddHabit';
 
 class ClearAllCheckbox extends Component {
-  constructor() {
-    super();
-    this.state = {
-    }
+constructor() {
+  super();
+  this.state = {
+    sunday: false,
+    monday: false,
+    tuesday: false,
+    wednesday: false,
+    thursday: false,
+    friday: false,
+    saturday: false
   }
-//   deleteHabit = habitId => {
-//     const dbRef = firebase.database().ref();
-//     dbRef.child(habitId).remove();
-//   }
+}
 
-//   <span
-//   id={habitValue.habitId}
-//   className="deleteHabit"
-//   onClick={() => this.deleteHabit(habitValue.habitId)}>
-//   <i className="fas fa-trash-alt"></i>
-// </span>
+  handleOnClear = (e) => {
+    const dbRef = firebase.database().ref();
+
+    for (let i = 0; i < this.props.habitTracker.length; i++) {
+      // this.props.habitTracker[i].habitName
+      const sunday = this.props.habitTracker[i].habitName.sunday
+      const monday = this.props.habitTracker[i].habitName.monday
+      const tuesday = this.props.habitTracker[i].habitName.tuesday
+      const wednesday = this.props.habitTracker[i].habitName.wednesday
+      const thursday = this.props.habitTracker[i].habitName.thursday
+      const friday = this.props.habitTracker[i].habitName.friday
+      const saturday = this.props.habitTracker[i].habitName.saturday
+
+      // const clearDays = {
+
+      // }
+
+      dbRef.set(sunday)
+
+    }
+
+    // this.props.habitTracker[i].habitName.sunday = false,
+    //   this.props.habitTracker[i].habitName.monday = false,
+    //   this.props.habitTracker[i].habitName.tuesday = false,
+    //   this.props.habitTracker[i].habitName.wednesday = false
+
+  }
 
   render() {
     return (
       <div>
-        <button className="resetWeeks">Start new week</button>
+        <button className="resetWeeks" onClick={this.handleOnClear}>Start new week</button>
       </div>
     )
   }
