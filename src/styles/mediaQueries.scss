@@ -1,0 +1,18 @@
+@mixin smallDesktop {
+  @media (max-width: 1080px) {
+    @content;
+  }
+}
+
+//this one is mainly for the image
+@mixin smallerDesktop {
+  @media (max-width: 950px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 780px) {
+    @content;
+  }
+}

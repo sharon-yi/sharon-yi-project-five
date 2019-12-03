@@ -80,8 +80,8 @@ class AddHabit extends Component {
                   onClick={() => this.deleteHabit(habitValue.habitId)}>
                   <i className="fas fa-trash-alt"></i>
                 </span>
-                <ul className="habitItem">
-                  <li>
+                <ul>
+                  <li className="habitItem">
                     {habitValue.habitName.habitName}
                     <GetCheckboxInfo habitValue={habitValue} />
                   </li>

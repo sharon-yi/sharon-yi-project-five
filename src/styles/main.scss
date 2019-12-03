@@ -1,3 +1,5 @@
+@import "mediaQueries";
+
 body {
   background-color: rgb(255, 248, 234);
   max-width: 780px;
@@ -6,11 +8,27 @@ body {
   font-weight: 400;
   font-style: normal;
   position: relative;
+
+  @include smallerDesktop {
+    width: 90%;
+  }
+
+  @include tablet {
+    margin-top: 50px;
+  }
 }
 
 h2 {
   font-weight: normal;
   margin-bottom: 250px;
+
+  @include smallerDesktop {
+    margin-bottom: 350px;
+  }
+
+  @include tablet {
+    margin-bottom: 50%;
+  }
 }
 
 .backgroundImage {
@@ -19,11 +37,32 @@ h2 {
   top: 0px;
   left: 25%;
   z-index: -1;
+
+  @include smallDesktop {
+    width: 650px;
+    top: 20px;
+  }
+
+  @include smallerDesktop {
+    width: 90%;
+    top: 150px;
+    left: 10%;
+  }
+
+  @include tablet {
+    width: 100%;
+    top: 110px;
+    left: 0;
+  }
 }
 
 .datesContainer {
   display: flex;
   justify-content: flex-end;
+
+  @include tablet {
+    justify-content: space-around;
+  }
 }
 
 .dates {
@@ -31,6 +70,12 @@ h2 {
   justify-content: space-evenly;
   width: 55.7%;
   padding-right: 2px;
+
+  @include tablet {
+    padding-left: 6%;
+    width: 90%;
+    justify-content: space-around;
+  }
 }
 
 .dateName {
@@ -44,6 +89,15 @@ h2 {
 .addHabitInput {
   float: left;
   margin-top: 20px;
+  margin-bottom: 100px;
+
+  @include tablet {
+    float: none;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
 }
 
 .addHabitInput input {
@@ -53,6 +107,10 @@ h2 {
   border: 2px solid rgb(247, 164, 10);
   box-shadow: 2px 2px 3px rgb(235, 235, 235);
   border-radius: 5px;
+
+  @include tablet {
+    width: 60%;
+  }
 }
 
 .addHabitInput button {
@@ -90,6 +148,13 @@ h2 {
   margin-left: 5px;
   width: 150px;
   padding: 5px;
+
+  @include tablet {
+    float: none;
+    display: block;
+    width: 40%;
+    margin: 20px auto 50px auto;
+  }
 }
 
 .resetWeeks:hover {
