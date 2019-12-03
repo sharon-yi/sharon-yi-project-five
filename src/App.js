@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './styles/styles.scss';
 import Header from './Header';
 import AddHabit from './AddHabit';
+import ClearAllCheckbox from './ClearAllCheckbox';
 
 
 class App extends Component {
@@ -28,7 +29,7 @@ class App extends Component {
           </div>
         </div>
         <AddHabit />
-        <button className="resetWeeks">Start new week</button>
+        <ClearAllCheckbox />
       </div>
     )
   }

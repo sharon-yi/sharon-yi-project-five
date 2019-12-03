@@ -67,7 +67,6 @@ class AddHabit extends Component {
     dbRef.child(habitId).remove();
   }
 
-
   render() {
     return (
       <div>

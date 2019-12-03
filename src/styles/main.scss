@@ -1,23 +1,26 @@
 body {
-  background-color: rgb(251, 249, 255);
-  width: 90%;
+  background-color: rgb(255, 248, 234);
   max-width: 780px;
-  margin: 0 auto;
+  margin: 100px auto 0 auto;
   font-family: proxima-soft, sans-serif;
   font-weight: 400;
   font-style: normal;
+  position: relative;
 }
-ul {
-  padding: 0;
-  margin: 0;
+
+h2 {
+  font-weight: normal;
+  margin-bottom: 250px;
 }
-li {
-  list-style-type: none;
-  font-size: 18px;
+
+.backgroundImage {
+  position: absolute;
+  width: 700px;
+  top: 0px;
+  left: 25%;
+  z-index: -1;
 }
-h1 {
-  color: rgb(99, 30, 209);
-}
+
 .datesContainer {
   display: flex;
   justify-content: flex-end;
@@ -33,96 +36,56 @@ h1 {
 .dateName {
   text-transform: uppercase;
   margin: 0 0 10px 0;
-  color: rgb(99, 30, 209);
-}
-
-.habitAndDelete {
-  display: flex;
-  align-items: center;
-}
-
-.deleteHabit {
-  margin-right: 20px;
-  margin-bottom: 10px;
-  cursor: pointer;
-  color: lightgray;
-}
-
-.deleteHabit:hover {
-  color: rgb(216, 187, 235);
-}
-
-.deleteHabit:active {
-  color: rgb(99, 30, 209);
-}
-
-.habitItem {
-  background-color: #fff;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  padding: 10px 0px 10px 20px;
-  margin-bottom: 10px;
-  border: 2px solid rgb(221, 211, 238);
-  border-radius: 10px;
-}
-ul li {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-.checkDate {
-  display: flex;
-  width: 60%;
-  justify-content: space-evenly;
-  align-items: center;
-}
-input[type="checkbox"] {
-  cursor: pointer;
+  color: rgb(247, 164, 10);
 }
 
 /* ADDING HABIT INPUT SECTION AND BUTTON */
 
 .addHabitInput {
   float: left;
+  margin-top: 20px;
 }
 
 .addHabitInput input {
   width: 200px;
   margin-left: 35px;
   padding: 5px;
-  border: 2px solid rgb(221, 211, 238);
+  border: 2px solid rgb(247, 164, 10);
+  box-shadow: 2px 2px 3px rgb(235, 235, 235);
   border-radius: 5px;
 }
+
 .addHabitInput button {
-  background-color: white;
-  color: rgb(99, 30, 209);
-  font-weight: bold;
-  border: 2px solid rgb(221, 211, 238);
+  color: white;
+  background-color: rgb(247, 164, 10);
+  border: 2px solid rgb(236, 157, 9);
+  box-shadow: 2px 2px 3px rgb(235, 235, 235);
   border-radius: 5px;
   margin-left: 5px;
   width: 120px;
   padding: 5px;
+  font-weight: bold;
 }
 
 .addHabitInput button:hover {
-  background-color: rgb(216, 187, 235);
-  border: 2px solid rgb(183, 161, 221);
+  background-color: rgb(253, 143, 0);
+  border: 2px solid rgb(236, 138, 9);
 }
 
 .addHabitInput button:active {
-  background-color: rgb(99, 30, 209);
-  color: white;
-  border: 2px solid rgb(77, 21, 168);
+  background-color: rgb(223, 108, 0);
+  border: 2px solid rgb(218, 123, 0);
 }
 
 /* RESET WEEKS BUTTON */
 .resetWeeks {
   float: right;
-  background-color: white;
-  color: rgb(99, 30, 209);
+  margin-top: 20px;
+  color: white;
+  background-color: rgb(247, 164, 10);
   font-weight: bold;
-  border: 2px solid rgb(221, 211, 238);
+  border: 2px solid rgb(236, 157, 9);
+  box-shadow: 2px 2px 3px rgb(235, 235, 235);
   border-radius: 5px;
   margin-left: 5px;
   width: 150px;
@@ -130,12 +93,11 @@ input[type="checkbox"] {
 }
 
 .resetWeeks:hover {
-  background-color: rgb(216, 187, 235);
-  border: 2px solid rgb(183, 161, 221);
+  background-color: rgb(253, 143, 0);
+  border: 2px solid rgb(236, 138, 9);
 }
 
 .resetWeeks:active {
-  background-color: rgb(99, 30, 209);
-  color: white;
-  border: 2px solid rgb(77, 21, 168);
+  background-color: rgb(223, 108, 0);
+  border: 2px solid rgb(218, 123, 0);
 }

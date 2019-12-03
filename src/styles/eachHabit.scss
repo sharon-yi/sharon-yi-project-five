@@ -1,0 +1,62 @@
+ul {
+  padding: 0;
+  margin: 0;
+
+  li {
+    list-style-type: none;
+    font-size: 18px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.habitAndDelete {
+  display: flex;
+  align-items: center;
+}
+
+// DELETE HABIT ICON
+
+.deleteHabit {
+  margin-right: 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: rgb(245, 204, 129);
+}
+
+.deleteHabit:hover {
+  color: rgb(238, 171, 48);
+}
+
+.deleteHabit:active {
+  color: rgb(241, 157, 0);
+}
+
+// HABIT LIST ITEM BOX
+
+.habitItem {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 0px 10px 20px;
+  margin-bottom: 10px;
+  border: 2px solid rgb(255, 222, 112);
+  box-shadow: 2px 2px 3px rgb(235, 235, 235);
+  border-radius: 10px;
+  color: black;
+}
+
+// CHECKBOXES
+
+.checkDate {
+  display: flex;
+  width: 57%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+}
