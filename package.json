@@ -9,7 +9,7 @@
     "@fortawesome/react-fontawesome": "^0.1.7",
     "firebase": "^7.5.0",
     "gh-pages": "^2.1.1",
-    "node-sass": "^4.13.0",
+    "node-sass": "^7.0.0",
     "pretty-checkbox": "^3.0.3",
     "pretty-checkbox-react": "^1.1.0",
     "react": "^16.12.0",
